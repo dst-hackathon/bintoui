@@ -14,7 +14,7 @@ angular.module('myApp.services', []).
 
       this.dish = {
         restaurantName: 'Madam-T',
-        price: 400000.00 + (Math.random() * 1000),
+        price: 400000.00 + Math.floor(Math.random() * 100),
         imagePath: '/app/images/food1.jpg',
         name: ''
       };

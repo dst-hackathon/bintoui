@@ -10,9 +10,12 @@ angular.module('myApp.controllers', []).
     };
 
   }])
-  .controller('SuggestController', ['$scope', 'DishService', function($scope, dishService) {
+  .controller('SuggestController', ['$scope', 'DishService', '$location', function($scope, dishService, $location) {
 
     $scope.dish = dishService.dish;
+    if (!$scope.dish) {
+      $location.path('/home');
+    }
 
     $scope.suggest = function() {
 
