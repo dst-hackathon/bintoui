@@ -7,6 +7,11 @@
 
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
+      <div class="row" ng-show="dish.name">
+        <div class="col-md-12">
+          <h2><i>{{dish.name}}</i></h2>
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-8">
           <h3><i class="icon-home"></i> {{dish.restaurantName}}</h3>
@@ -20,7 +25,7 @@
   </div>
 
   <div class="row">
-    <div class="center">
+    <div class="center suggest-area">
       <a href="#/suggest">
         <button type="button" class="btn btn-primary" ng-click="suggest()">Suggest Me</button>
       </a>

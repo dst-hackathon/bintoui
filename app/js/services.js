@@ -16,7 +16,7 @@ angular.module('myApp.services', []).
         restaurantName: 'Madam-T',
         price: 400000.00 + Math.floor(Math.random() * 100),
         imagePath: '/app/images/food1.jpg',
-        name: ''
+        name: 'Steamed Rice-skin Dumplings'
       };
 
       return this.dish;
