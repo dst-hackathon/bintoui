@@ -1,6 +1,8 @@
 body {
   padding-top: 70px;
   padding-bottom: 70px;
+  background-color: white;
+  color: black;
 }
 
 /* app css stylesheet */
@@ -49,4 +51,16 @@ body {
 
 .suggest-area {
   margin-top: 40px;
+}
+
+.navbar {
+	background-color: #FFaf40;
+}
+
+.icon {
+	width: 30px;
+}
+
+.dish-name {
+	color: #B1ABAE;
 }
