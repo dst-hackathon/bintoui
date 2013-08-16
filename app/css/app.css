@@ -1,3 +1,8 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 /* app css stylesheet */
 
 .menu {
@@ -27,4 +32,17 @@
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.navbar-fixed-bottom {
+  padding-top: 10px;
+  min-height: 40px;
+}
+
+.price {
+  margin-top: 30px;
 }
