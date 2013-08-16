@@ -14,4 +14,10 @@ angular.module('myApp.controllers', []).
 
     $scope.dish = dishService.dish;
 
+    $scope.suggest = function() {
+
+      // TODO: Refactor
+      $scope.dish = dishService.get();
+    };   
+
   }]);
