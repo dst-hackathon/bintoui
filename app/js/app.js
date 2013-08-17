@@ -8,5 +8,6 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
     $routeProvider.when('/add', {templateUrl: 'partials/add.html', controller: 'AddController'});
     $routeProvider.when('/suggest', {templateUrl: 'partials/suggest.html', controller: 'ViewController'});
     $routeProvider.when('/view/:id', {templateUrl: 'partials/suggest.html', controller: 'ViewController'});
+    $routeProvider.when('/list', {templateUrl: 'partials/list.html', controller: 'ListController'});
     $routeProvider.otherwise({redirectTo: '/home'});
   }]);

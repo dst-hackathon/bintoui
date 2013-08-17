@@ -12,7 +12,8 @@ angular.module('myApp.services', []).
     var basePath = 'http://binto.codedeck.com'
 
     var Dish = $resource(basePath + '/dishes/:id.json', {}, {
-      suggest: { method: 'GET', url: basePath + '/dishes/suggest.json' }
+      suggest: { method: 'GET', url: basePath + '/dishes/suggest.json' },
+      list :{ method: 'GET', url: basePath + '/dishes.json', isArray:true }
     });
 
     service.get = function(id) {
@@ -30,6 +31,10 @@ angular.module('myApp.services', []).
       }
 
       return dish;
+    };
+    
+    service.list = function(){
+        return Dish.query();
     };
 
     return service;

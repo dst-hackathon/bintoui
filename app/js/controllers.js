@@ -62,5 +62,12 @@ angular.module('myApp.controllers', []).
       $('#image').val('');
       $('input').prop('disabled', false);
     }
+  }])
+  .controller('ListController', ['$scope','DishService', function($scope,dishService) {
+    $scope.dishes = dishService.list();
+    
+    $scope.refresh = function() {
+        $scope.dishes = dishService.list();
+    };
 
   }]);
