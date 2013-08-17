@@ -93,6 +93,7 @@ body {
 }
 .icon-plus-sign{
     color: #e8d069;
+    text-decoration: none;
 }
 
 .navbar-fixed-bottom{
