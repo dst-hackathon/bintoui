@@ -78,3 +78,9 @@ body {
   font-size: 50px;
   margin: 75px 0;
 }
+
+.btn-home {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
