@@ -9,10 +9,10 @@ angular.module('myApp.services', []).
   factory('DishService', ['$resource', function($resource) {
 
     var service = {};
-    var basePath = 'http://binto.codedeck.com/'
+    var basePath = 'http://binto.codedeck.com'
 
-    var Dish = $resource(basePath + 'dishes.json', {}, {
-      suggest: { method: 'GET', url: basePath + 'dishes/suggest.json' }
+    var Dish = $resource(basePath + '/dishes.json', {}, {
+      suggest: { method: 'GET', url: basePath + '/dishes/suggest.json' }
     });
 
     service.get = function() {

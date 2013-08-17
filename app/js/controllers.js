@@ -21,6 +21,6 @@ angular.module('myApp.controllers', []).
 
       // TODO: Refactor
       $scope.dish = dishService.get();
-    };   
+    };
 
   }]);
