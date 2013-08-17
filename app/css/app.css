@@ -40,11 +40,6 @@ body {
   text-align: center;
 }
 
-.navbar-fixed-top {
-  border: none;
-  background-color: #ef4832;
-}
-
 .navbar-fixed-bottom {
   padding-top: 10px;
   min-height: 40px;
@@ -60,10 +55,6 @@ body {
 
 .suggest-area {
   margin-top: 40px;
-}
-
-.navbar {
-	background-color: #FFaf40;
 }
 
 .icon {
@@ -82,4 +73,23 @@ body {
 
 .btn-home {
   margin-top: 20%;
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+.icon-plus-sign{
+    color: #e8d069;
+}
+
+.navbar-fixed-bottom{
+    background-color: #EEEEEE; 
 }

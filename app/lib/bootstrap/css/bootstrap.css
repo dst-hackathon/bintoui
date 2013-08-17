@@ -1,3 +1,4 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
 /*!
  * Bootstrap v3.0.0
  *
@@ -3159,12 +3160,22 @@ button.close {
   border-top-left-radius: 0;
 }
 
-.navbar {
+/*.navbar {
   position: relative;
   min-height: 50px;
   margin-bottom: 20px;
   background-color: #f8f8f8;
   border: 1px solid #e7e7e7;
+}*/
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background-color: #ad1d28;
+    border-radius: 4px
 }
 
 .navbar:before,
@@ -3313,7 +3324,9 @@ button.close {
   font-size: 18px;
   line-height: 20px;
   color: #777777;
+  font-family: 'Lobster',cursive;
 }
+
 
 .navbar-brand:hover,
 .navbar-brand:focus {
