@@ -17,10 +17,20 @@ angular.module('myApp.controllers', []).
       $location.path('/home');
     }
 
+    // $scope.loadingImage = true;
+    // $scope.$on('$viewContentLoaded', function() {
+    //   imagesLoaded(document.querySelector('.dish-image'), function(instance) {
+    //     $scope.loadingImage = false;
+
+    //     console.log(instance);
+    //   });
+    // });
+
+
     $scope.suggest = function() {
 
       // TODO: Refactor
       $scope.dish = dishService.get();
-    };   
+    };
 
   }]);
