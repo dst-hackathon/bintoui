@@ -10,17 +10,22 @@ angular.module('myApp.controllers', []).
     };
 
   }])
-  .controller('SuggestController', ['$scope', 'DishService', '$location', function($scope, dishService, $location) {
+  .controller('ViewController', ['$scope', 'DishService', '$location', '$routeParams',
+      function($scope, dishService, $location, $routeParams) {
 
     $scope.dish = dishService.dish;
-    if (!$scope.dish) {
+    if (!$scope.dish && !$routeParams.id) {
       $location.path('/home');
     }
-
+    
+    if($routeParams.id){
+      $scope.dish = dishService.get($routeParams.id);
+    }
+    
     $scope.suggest = function() {
 
       // TODO: Refactor
-      $scope.dish = dishService.get();
+      $scope.dish = dishService.get($routeParams.id);
     };
 
   }])
