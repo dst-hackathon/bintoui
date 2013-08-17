@@ -98,3 +98,8 @@ body {
 .navbar-fixed-bottom{
     background-color: #EEEEEE; 
 }
+
+.navbar-text.icon{
+    font-size: 20px;
+    padding-left: 20px;
+}
