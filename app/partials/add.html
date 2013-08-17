@@ -4,17 +4,17 @@
     <form ng-upload action="http://binto.codedeck.com/dishes.json">
       <div class="form-group">
         <label for="restaurant">Restaurant</label>
-        <input id="restaurant" class="form-control" type="text" ng-model="restaurant"/> 
+        <input id="restaurant" class="form-control" type="text" ng-model="dish.restaurant"/> 
       </div>
 
       <div class="form-group">
         <label for="name">Dish Name</label>
-        <input id="name" class="form-control" type="text" ng-model="name" name="dish[name]"/> 
+        <input id="name" class="form-control" type="text" ng-model="dish.name" name="dish[name]"/> 
       </div>
 
       <div class="form-group">
         <label for="price">Price</label>
-        <input id="price" class="form-control" type="text" ng-model="price" name="dish[price]"/> 
+        <input id="price" class="form-control" type="text" ng-model="dish.price" name="dish[price]"/> 
       </div>
 
       <div class="form-group">

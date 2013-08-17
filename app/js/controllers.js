@@ -25,7 +25,11 @@ angular.module('myApp.controllers', []).
 
   }])
   .controller('AddController', ['$scope', 'DishService', function($scope, dishService) {
+
     $scope.uploadComplete = function(content, completed) {
-      
+      $scope.dish = {};
+
+      // TODO: If possible, should be refactored to be another directive
+      $('#image').val('');
     };
   }]);
