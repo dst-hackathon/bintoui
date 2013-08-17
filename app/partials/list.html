@@ -1,0 +1,17 @@
+<div class="list-group" ng-repeat="dish in dishes">
+    <a href="#view/{{dish.id}}" class="list-group-item">
+        <img ng-src="http://binto.codedeck.com/{{dish.image_code}}" style="max-width: 100%;"/>
+        <div class="col-md-10 col-md-offset-1">
+            <div class="row" ng-show="dish.name">
+                <div class="col-md-12">
+                    <h2><i class="dish-name">{{dish.name}}</i></h2>
+                </div>
+            </div>
+            <div class="row" ng-show="dish.price">
+                <div class="col-xs-12">
+                    <h3>{{dish.restaurant_name}}</h3>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
