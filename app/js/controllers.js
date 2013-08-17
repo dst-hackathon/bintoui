@@ -25,5 +25,7 @@ angular.module('myApp.controllers', []).
 
   }])
   .controller('AddController', ['$scope', 'DishService', function($scope, dishService) {
-
+    $scope.uploadComplete = function(content, completed) {
+      
+    };
   }]);
