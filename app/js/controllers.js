@@ -21,7 +21,7 @@ angular.module('myApp.controllers', []).
 
       // TODO: Refactor
       $scope.dish = dishService.get();
-    };   
+    };
 
   }])
   .controller('AddController', ['$scope', 'DishService', function($scope, dishService) {

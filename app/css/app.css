@@ -73,3 +73,8 @@ body {
 .dish-name {
 	color: #B1ABAE;
 }
+
+.dish-image-container .icon-spinner {
+  font-size: 50px;
+  margin: 75px 0;
+}
