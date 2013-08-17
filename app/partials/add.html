@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <form ng-upload ng-submit="validate($event)" action="http://binto.codedeck.com/dishes.json">
+    <form ng-upload ng-submit="onSubmit($event)" action="http://binto.codedeck.com/dishes.json">
       <div class="form-group">
         <label class="control-label" for="restaurant">Restaurant</label>
         <input id="restaurant" class="form-control" type="text" name="dish[restaurant_name]" ng-model="dish.restaurant" validate="required"/>
