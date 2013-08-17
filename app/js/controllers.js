@@ -27,9 +27,27 @@ angular.module('myApp.controllers', []).
   .controller('AddController', ['$scope', 'DishService', function($scope, dishService) {
 
     $scope.uploadComplete = function(content, completed) {
-      $scope.dish = {};
 
-      // TODO: If possible, should be refactored to be another directive
-      $('#image').val('');
+      console.log(completed);
+      if (completed) {
+        $scope.dish = {};
+
+        // TODO: If possible, should be refactored to be another directive
+        $('#image').val('');
+      }
+
     };
+
+    $scope.validate = function($event) {
+
+      $('[validate]').trigger('validate');
+
+      if ($('.has-error').length > 0) {
+
+        $('#submitBtn').prop('disabled', false);
+
+        return $event.preventDefault();
+      }
+    };
+
   }]);

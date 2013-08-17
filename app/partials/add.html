@@ -1,28 +1,30 @@
 
 <div class="row">
   <div class="col-md-12">
-    <form ng-upload action="http://binto.codedeck.com/dishes.json">
+    <form ng-upload ng-submit="validate($event)" action="http://binto.codedeck.com/dishes.json">
       <div class="form-group">
-        <label for="restaurant">Restaurant</label>
-        <input id="restaurant" class="form-control" type="text" ng-model="dish.restaurant"/> 
+        <label class="control-label" for="restaurant">Restaurant</label>
+        <input id="restaurant" class="form-control" type="text" name="dish[restaurant_name]" ng-model="dish.restaurant" validate="required"/>
+        <p class="error-message">Restaurant name is required.</p>
       </div>
 
       <div class="form-group">
-        <label for="name">Dish Name</label>
-        <input id="name" class="form-control" type="text" ng-model="dish.name" name="dish[name]"/> 
+        <label class="control-label" for="name">Dish Name</label>
+        <input id="name" class="form-control" type="text" ng-model="dish.name" name="dish[name]"/>
       </div>
 
       <div class="form-group">
-        <label for="price">Price</label>
-        <input id="price" class="form-control" type="text" ng-model="dish.price" name="dish[price]"/> 
+        <label class="control-label" for="price">Price</label>
+        <input id="price" class="form-control" type="number" ng-model="dish.price" name="dish[price]" validate="required number"/> 
+        <p class="error-message">Price is required and must be numeric.</p>
       </div>
 
       <div class="form-group">
-        <label for="image"></label>
-        <input id="image" class="form-control" type="file" name="dish[image_code]" accept="image/*" capture="camera" />
+        <label class="control-label" for="image">Image</label>
+        <input id="image" class="form-control" type="file" name="dish[image_code]" accept="image/*" capture="camera" validate="required"/>
       </div>
 
-      <button type="submit" class="btn btn-default" upload-submit="uploadComplete(content, completed)">Add New Dish!</button>
+      <button id="submitBtn" type="submit" class="btn btn-default" upload-submit="uploadComplete(content, completed)">Add New Dish!</button>
     </form>  
   </div>
 </div>

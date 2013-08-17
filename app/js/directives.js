@@ -40,4 +40,44 @@ angular.module('myApp.directives', []).
       }
     };
       
+  }])
+  .directive('validate', [function() {
+
+    return {
+      link: function(scope, elm, attrs) {
+
+        var doValidation = function(validation) {
+          var value = $(elm).val();
+
+          switch(validation) {
+            case 'required':
+              return !!value;
+
+            case 'number':
+              return _.isNumber(value);
+
+            default:
+              return false;
+          }
+        };
+
+        var errorMessage = $(elm).siblings('.error-message');
+        errorMessage.hide();
+
+        $(elm).on('input blur change validate', function(event) {
+          var validations = attrs.validate;
+
+          $.each(validations.split(' '), function(i, validation) {
+
+            var valid = doValidation(validation);
+
+            $(elm).closest('.form-group').toggleClass('has-error', !valid);
+            errorMessage.toggle(!valid);
+
+            return !valid;
+            
+          });
+        });
+      }
+    };
   }]);
