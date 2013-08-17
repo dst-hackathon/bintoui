@@ -99,3 +99,11 @@ body {
 .navbar-fixed-bottom{
     background-color: #EEEEEE; 
 }
+
+.home-title {
+  position: absolute;
+  left: calc(50% - 309px / 2);
+  font-family: 'Lobster',cursive;
+  font-size: 72px;
+  margin-top: 12%;
+}
