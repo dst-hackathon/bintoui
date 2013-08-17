@@ -17,7 +17,7 @@ angular.module('myApp.directives', []).
           var image = $(imageTemplate);
           var spinner = $(spinnerTemplate);
 
-          console.log(path);
+          console.log("show : "+path);
 
           image
             .hide()
@@ -28,10 +28,13 @@ angular.module('myApp.directives', []).
             .append(spinner)
             .append(image);
 
-          imagesLoaded(image, function() {
-            spinner.hide();
-            image.show();
-          });
+          if( path && path.length > 0 )
+          {
+              imagesLoaded(image, function() {
+                  spinner.hide();
+                  image.show();
+              });
+          }
 
         });
       }
