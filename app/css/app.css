@@ -40,11 +40,6 @@ body {
   text-align: center;
 }
 
-.navbar-fixed-top {
-  border: none;
-  background-color: #ef4832;
-}
-
 .navbar-fixed-bottom {
   padding-top: 10px;
   min-height: 40px;
@@ -62,17 +57,13 @@ body {
   margin-top: 40px;
 }
 
-.navbar {
-	background-color: #FFaf40;
-}
-
 .icon {
 	width: 30px;
 }
 
 .dish-name {
 	color: #B1ABAE;
-    word-break: break-all;
+  word-break: break-all;
 }
 
 .dish-image-container .icon-spinner {
@@ -81,12 +72,29 @@ body {
 }
 
 .btn-home {
-	position: absolute;
-	top: 50%;
-	left: 50%;
+  margin-top: 20%;
 }
 
 .error-message {
   color: #b94a48;
   margin-top: 5px;
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+.icon-plus-sign{
+    color: #e8d069;
+}
+
+.navbar-fixed-bottom{
+    background-color: #EEEEEE; 
 }

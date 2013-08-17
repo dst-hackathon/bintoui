@@ -11,15 +11,23 @@ angular.module('myApp.services', []).
     var service = {};
     var basePath = 'http://binto.codedeck.com'
 
-    var Dish = $resource(basePath + '/dishes.json', {}, {
+    var Dish = $resource(basePath + '/dishes/:id.json', {}, {
       suggest: { method: 'GET', url: basePath + '/dishes/suggest.json' }
     });
 
-    service.get = function() {
-
-      var dish = this.dish = Dish.suggest(function() {
-        dish.imagePath = basePath + dish.image_code.url;
-      });
+    service.get = function(id) {
+      var dish;
+      if(id){
+        dish = this.dish = Dish.get({id:id},function(){
+            dish.imagePath = basePath + dish.image_code;
+        });
+      }
+      else{
+        //suggest
+        dish = this.dish = Dish.suggest(function() {
+          dish.imagePath = basePath + dish.image_code;
+        });  
+      }
 
       return dish;
     };
