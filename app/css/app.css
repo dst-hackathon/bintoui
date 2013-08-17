@@ -38,9 +38,18 @@ body {
   text-align: center;
 }
 
+.navbar-fixed-top {
+  border: none;
+  background-color: #ef4832;
+}
+
 .navbar-fixed-bottom {
   padding-top: 10px;
   min-height: 40px;
+}
+
+.navbar .navbar-brand {
+  color: white;
 }
 
 .price {
