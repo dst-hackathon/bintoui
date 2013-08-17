@@ -23,4 +23,7 @@ angular.module('myApp.controllers', []).
       $scope.dish = dishService.get();
     };
 
+  }])
+  .controller('AddController', ['$scope', 'DishService', function($scope, dishService) {
+
   }]);
