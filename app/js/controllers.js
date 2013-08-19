@@ -4,30 +4,20 @@
 
 angular.module('myApp.controllers', []).
   controller('HomeController', ['$scope', 'DishService', function($scope, dishService) {
+
     $scope.isHome = true;
-
-    $scope.suggest = function() {
-      dishService.get();
-    };
-
+    $scope.suggest = dishService.get;
+    
   }])
-  .controller('ViewController', ['$scope', 'DishService', '$location', '$routeParams',
+  .controller('DishController', ['$scope', 'DishService', '$location', '$routeParams',
       function($scope, dishService, $location, $routeParams) {
 
-    $scope.dish = dishService.dish;
-    if (!$scope.dish && !$routeParams.id) {
+    $scope.dish = $routeParams.id ? dishService.get($routeParams.id) : dishService.dish;
+    $scope.suggest = dishService.get;
+
+    if (!$scope.dish) {
       $location.path('/home');
     }
-    
-    if($routeParams.id){
-      $scope.dish = dishService.get($routeParams.id);
-    }
-    
-    $scope.suggest = function() {
-
-      // TODO: Refactor
-      $scope.dish = dishService.get($routeParams.id);
-    };
 
   }])
   .controller('AddController', ['$scope', '$location', function($scope, $location) {
