@@ -13,25 +13,25 @@ angular.module('myApp.services', []).
       list :{ method: 'GET', url: serviceEndpoint + '/dishes.json', isArray:true }
     });
 
-    var service = {};
+    var service = {
+      list: Dish.query,
 
-    service.list = Dish.query;
-    
-    service.get = function(id) {
+      get: function(id) {
 
-      var func = (function() {
-        if (id) {
-          return _.partial(Dish.get, { id: id });
-        } else {
-          return Dish.suggest;
-        }
-      })();
+        var callingFunc = (function() {
+          if (id) {
+            return _.partial(Dish.get, { id: id });
+          } else {
+            return Dish.suggest;
+          }
+        })();
 
-      var dish = service.dish = func(function() {
-        dish.imagePath = serviceEndpoint + dish.image_code;
-      });
+        var dish = service.dish = callingFunc(function() {
+          dish.imagePath = serviceEndpoint + dish.image_code;
+        });
 
-      return dish;
+        return dish;
+      }
     };
 
     return service;
