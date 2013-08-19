@@ -13,7 +13,10 @@ angular.module('myApp.controllers', []).
       function($scope, dishService, $location, $routeParams) {
 
     $scope.dish = $routeParams.id ? dishService.get($routeParams.id) : dishService.dish;
-    $scope.suggest = dishService.get;
+    
+    $scope.suggest = function() {
+      $scope.dish = dishService.get();
+    };
 
     if (!$scope.dish) {
       $location.path('/home');
