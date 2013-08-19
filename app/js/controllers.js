@@ -44,7 +44,7 @@ angular.module('myApp.controllers', []).
 
     $scope.onSubmit = function($event) {
 
-      $('input').prop('disabled', true);
+      $('input').prop('readonly', true);
       $('[validate]').trigger('validate');
 
       if ($('.has-error').length > 0) {
@@ -60,7 +60,7 @@ angular.module('myApp.controllers', []).
 
       // TODO: If possible, should be refactored to be another directive
       $('#image').val('');
-      $('input').prop('disabled', false);
+      $('input').prop('readonly', false);
     }
   }])
   .controller('ListController', ['$scope','DishService', function($scope,dishService) {
